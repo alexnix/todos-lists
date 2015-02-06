@@ -1,0 +1,9 @@
+<div class="col-md-4 col-md-push-4">
+	<form ng-submit="doLogin()" class="loginForm zoomIn animated">
+		<header>Login or Register</header>
+		<div ng-show="error">{{error}}</div>
+		<input placeholder="real valid Email" ng-model="email" type="email" required/>
+		<input placeholder="min 8 chars Password" ng-model="password" ng-minlength="8" type="password" required/>
+		<input type="submit"/>
+	</form>
+</div>

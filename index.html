@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+	<head>
+		 
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans|Oswald' rel='stylesheet' type='text/css'>
+		<style type="text/css">
+		* {
+			font-family: 'Oswald';
+			color: black;
+		}
+		</style>
+		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+	    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+	    <link rel="stylesheet" type="text/css" href="css/animate.css"> 
+	    <link rel="stylesheet" type="text/css" href="css/mystyle.css"> 
+	</head>
+
+	<body ng-app="todo" ng-controller="appCtrl">
+		<div class="container" ng-show="loginUser">
+			<header>
+				<ul class="nav nav-pills" id="site-nav" >
+		  			<li><a href="#"><i class="fa fa-home"></i></a></li>
+		  			<li><a href="#" id="new-list" ng-click="newClick()">New List</a></li>
+		  			<li><a href="#" id="join-list" ng-click="joinClick()">Join List</a></li>
+		  		</ul>
+	  		</header>
+	  		<div class="container-fluid" id="the-container">
+	  		<form ng-submit="newList()">
+	  			<input type="text" id="the-input" ng-model="listName">
+	  		</form>
+	  		</div>
+	  		<hr/>
+  		</div>
+
+  		
+		<div class="container" ui-view></div>	
+
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular-cookies.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+		<script src="https://cdn.firebase.com/js/client/1.1.1/firebase.js"></script>
+		<script src="https://cdn.firebase.com/libs/angularfire/0.8.0/angularfire.min.js"></script>
+	  	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular-sanitize.js"></script>
+	  	<script type="text/javascript" src="js/wow.min.js"></script>
+	 	<script type="text/javascript" src="js/app.js"></script>
+	 	<script type="text/javascript" src="js/controllers.js"></script>
+	 	<script type="text/javascript" src="js/routes.js"></script>
+	</body>
+
+</html>

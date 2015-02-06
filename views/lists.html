@@ -1,0 +1,12 @@
+<section>
+	<header>Your news lists</header>
+	<article ng-repeat="list in lists">
+		<a ui-sref="list({id: list.$id})">
+			<div class="col-md-3 col-sm-4 col-xs-6 fadeIn animated">
+			    <div class="list-tile">
+			      <header>{{list.name}}</header> 
+			    </div>
+			</div>
+		</a>
+	</article>
+</section>
